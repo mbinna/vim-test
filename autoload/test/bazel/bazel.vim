@@ -1,7 +1,7 @@
 " https://github.com/janko/vim-test#extending
 
 if !exists('g:test#cpp#bazel#file_pattern')
-  let g:test#cpp#bazel#file_pattern = '\v(test_[^/]+|[^/]+_test)\.(cc|cpp)$'
+  let g:test#cpp#bazel#file_pattern = '\v(test_\w+|\w+_test)\.(cc|cpp|cxx)$'
 endif
 
 function! test#cpp#bazel#test_file(file)
